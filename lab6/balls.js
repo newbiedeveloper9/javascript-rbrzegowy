@@ -1,5 +1,6 @@
 let X = 35;
 let Y = 0.2 * window.innerWidth;
+let force = 100;
 var isInitialized = false;
 
 let balls = [];
@@ -102,4 +103,25 @@ xDoc.addEventListener("input", function () {
 let yDoc = document.getElementById("y");
 yDoc.addEventListener("input", function () {
     Y = this.value
+});
+
+canvas.addEventListener("mousemove", function (event) {
+    let mouseX = event.clientX;
+    let mouseY = event.clientY;
+
+    for (let i = 0; i < balls.length; i++) {
+        let ball = balls[i];
+        let distanceX = mouseX - ball.x;
+        let distanceY = mouseY - ball.y;
+        let dist = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        if (dist < force) {
+            ball.vx += distanceX / dist * (force - dist) * 0.01;
+            ball.vy += distanceY / dist * (force - dist) * 0.01;
+        }
+    }
+});
+
+let forceInput = document.getElementById("force-value");
+forceInput.addEventListener("input", function () {
+    force = this.value;
 });

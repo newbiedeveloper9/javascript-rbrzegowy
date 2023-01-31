@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Kulki</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+
+        #controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,6 +23,9 @@
     <br>
     <label for="y">Y:</label>
     <input type="number" id="y" value="300">
+    <br>
+    <label for="force-value">Force</label>
+    <input type="number" id="force-value" value="100">
     <br>
 
     <button id="start">Start</button>
