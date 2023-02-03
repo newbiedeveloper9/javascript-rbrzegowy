@@ -3,13 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+    <div>
+        <div>
+            <button onclick="setChannel(0)">Ustaw kanał 1</button>
+            <input type="checkbox" name="isChannelChecked" id="0">Play</input>
+        </div>
+        <div>
+            <button onclick="setChannel(1)">Ustaw kanał 2</button>
+            <input type="checkbox" name="isChannelChecked" id="1">Play</input>
+        </div>
+        <div>
+            <button onclick="setChannel(2)">Ustaw kanał 3</button>
+            <input type="checkbox" name="isChannelChecked" id="2">Play</input>
+        </div>
+        <div>
+            <button onclick="setChannel(3)">Ustaw kanał 4</button>
+            <input type="checkbox" name="isChannelChecked" id="3">Play</input>
+        </div>
+        <button onclick="play()">Odtwórz</button>
+    </div>
+    <div>
+        <audio src="./sounds/clap.wav" controls id="s1"></audio>
+        <audio src="./sounds/hihat.wav" controls id="s2"></audio>
+        <audio src="./sounds/boom.wav" controls id="s3"></audio>
+        <audio src="./sounds/kick.wav" controls id="s4"></audio>
+        <audio src="./sounds/ride.wav" controls id="s5"></audio>
+        <audio src="./sounds/openhat.wav" controls id="s6"></audio>
+    </div>
+    <script src="drumkit.js"></script>
+    <script>
 
+    </script>
 </body>
 
 </html>

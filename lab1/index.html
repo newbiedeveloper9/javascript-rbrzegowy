@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,55 @@
 </head>
 
 <body>
+    <div>
+        <label>Liczba 1:</label>
+        <input type="text" id="value1" oninput="calculate()">
+        <br>
+        <label>Liczba 2:</label>
+        <input type="text" id="value2" oninput="calculate()">
+        <br>
+        <label>Liczba 3:</label>
+        <input type="text" id="value3" oninput="calculate()">
+        <br>
+        <label>Liczba 4:</label>
+        <input type="text" id="value4" oninput="calculate()">
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
 
+        <label>Suma:</label>
+        <input type="text" id="sum" readonly>
+        <br>
+        <label>Średnia:</label>
+        <input type="text" id="average" readonly>
+        <br>
+        <label>Minimum:</label>
+        <input type="text" id="minimum" readonly>
+        <br>
+        <label>Maksimum:</label>
+        <input type="text" id="maximum" readonly>
+    </div>
+
+    <script>
+        function calculate() {
+            const value1 = parseFloat(document.getElementById('value1').value) || 0;
+            const value2 = parseFloat(document.getElementById('value2').value) || 0;
+            const value3 = parseFloat(document.getElementById('value3').value) || 0;
+            const value4 = parseFloat(document.getElementById('value4').value) || 0;
+
+            const sum = value1 + value2 + value3 + value4;
+            const average = sum / 4;
+            const minimum = Math.min(value1, value2, value3, value4);
+            const maximum = Math.max(value1, value2, value3, value4);
+
+            document.getElementById('sum').value = sum;
+            document.getElementById('average').value = average;
+            document.getElementById('minimum').value = minimum;
+            document.getElementById('maximum').value = maximum;
+        }
+    </script>
 </body>
 
 </html>
