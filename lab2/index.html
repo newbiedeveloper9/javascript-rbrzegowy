@@ -2,13 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab2</title>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+    <div id="slider">
+        <div class="slider-image">
+            <img src="./imgs/1.jpg">
+        </div>
+        <div class="slider-image">
+            <img src="./imgs/2.jpg">
+        </div>
+        <div class="slider-image">
+            <img src="./imgs/3.jpg">
+        </div>
+        <div class="slider-image">
+            <img src="./imgs/4.jpg">
+        </div>
+        <div class="slider-image">
+            <img src="./imgs/5.jpg">
+        </div>
+    </div>
+    <div>
+        <button onclick="moveSlider(0)">1</button>
+        <button onclick="moveSlider(1)">2</button>
+        <button onclick="moveSlider(2)">3</button>
+        <button onclick="moveSlider(3)">4</button>
+        <button onclick="moveSlider(4)">5</button>
+    </div>
+    <div>
+        <button id="previous">Poprzedni</button>
+        <button id="next">Kolejny</button>
+    </div>
+    <script src="./script.js"></script>
 
 </body>
 
